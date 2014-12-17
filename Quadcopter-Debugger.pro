@@ -13,13 +13,13 @@ TARGET = Quadcopter-Debugger
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    networkthread.cpp \
-    tcpserver.cpp
+SOURCES += src/main.cpp\
+        src/mainwindow.cpp \
+    src/networkthread.cpp \
+    src/tcpserver.cpp
 
-HEADERS  += mainwindow.h \
-    networkthread.h \
-    tcpserver.h
+HEADERS  += header/mainwindow.h \
+    header/networkthread.h \
+    header/tcpserver.h
 
-FORMS    += mainwindow.ui
+FORMS    += ui/mainwindow.ui

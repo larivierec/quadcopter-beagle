@@ -1,4 +1,4 @@
-#include "networkthread.h"
+#include "header/networkthread.h"
 
 NetworkThread::NetworkThread(int socketId, QObject *parent): QThread(parent)
 {

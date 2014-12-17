@@ -1,6 +1,6 @@
-#include "mainwindow.h"
+#include "header/mainwindow.h"
 #include <QApplication>
-#include "tcpserver.h"
+#include "header/tcpserver.h"
 
 
 int main(int argc, char *argv[])
