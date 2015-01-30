@@ -1,0 +1,130 @@
+12:27:45 **** Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+gcc  -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+12:28:07 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+gcc  -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+12:29:33 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+make: Nothing to be done for `all'.
+12:33:36 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+gcc  -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+12:33:39 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+make: Nothing to be done for `all'.
+12:35:31 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+../src/BBB_testing.c: In function ‘main’:
+../src/BBB_testing.c:17:9: warning: missing terminating " character [enabled by default]
+  printf("!!!Hello World!!!\n); /* prints !!!Hello World!!! */
+         ^
+../src/BBB_testing.c:17:2: error: missing terminating " character
+  printf("!!!Hello World!!!\n); /* prints !!!Hello World!!! */
+  ^
+../src/BBB_testing.c:18:2: error: expected expression before ‘return’
+  return EXIT_SUCCESS;
+  ^
+../src/BBB_testing.c:20:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+../src/BBB_testing.c:20:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/BBB_testing.o] Error 1
+12:35:43 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+gcc  -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+12:37:16 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+make: Nothing to be done for `all'.
+12:37:31 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+gcc  -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+12:39:16 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+make: Nothing to be done for `all'.
+12:39:28 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+gcc  -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+13:08:22 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+13:17:25 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 

@@ -1,0 +1,15 @@
+13:17:25 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o   
+Finished building target: BBB_testing
+ 
+
+13:17:26 Build Finished (took 848ms)
+
