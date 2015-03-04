@@ -10,9 +10,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "common_vars.h"
+#include "onboard_led_control.h"
+#include "string.h"
+
+
 
 int main(void) {
-	printf("!!!Hello World!!!\n"); /* prints !!!Hello World!!! */
+
+	int led;
+
+	printf("Which LED to turn on?\n");
+	scanf("%d", &led);
+
+	printf("You chose: %d\n", led);
+
+	on_board_led_on(led);
+	//okay
+
 	return EXIT_SUCCESS;
 }
