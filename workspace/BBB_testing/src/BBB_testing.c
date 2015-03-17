@@ -10,32 +10,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>//sleep in seconds
 #include "onboard_led_control.h"
 #include "string.h"
 
 
 
+
 int main(void) {
 
-	int led;
-	ob_bbb_led ob_led_path;
+	int led, i;
 
-	init_ob_leb_paths(&ob_led_path);
+	init_ob_leb_paths();
 
+	modify_trigger(HEARTBEAT, 0);
 
-	printf("%s", ob_led_path.brightness[0]);
+	printf("%s\n", ob_led_path.brightness[0]);
 
-
-
-
-
-	// printf("Which LED to turn on?\n");
-	// scanf("%d", &led);
-
-	// printf("You chose: %d\n", led);
-
-	// on_board_led_on(led);
-	//okay
+	clean_ob_bbb_led_path();
 
 	return EXIT_SUCCESS;
 }
