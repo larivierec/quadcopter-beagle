@@ -18,13 +18,23 @@
 int main(void) {
 
 	int led;
+	ob_bbb_led ob_led_path;
 
-	printf("Which LED to turn on?\n");
-	scanf("%d", &led);
+	init_ob_leb_paths(&ob_led_path);
 
-	printf("You chose: %d\n", led);
 
-	on_board_led_on(led);
+	printf("%s", ob_led_path.brightness[0]);
+
+
+
+
+
+	// printf("Which LED to turn on?\n");
+	// scanf("%d", &led);
+
+	// printf("You chose: %d\n", led);
+
+	// on_board_led_on(led);
 	//okay
 
 	return EXIT_SUCCESS;

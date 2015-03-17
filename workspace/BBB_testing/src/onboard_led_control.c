@@ -10,53 +10,49 @@
 #include <string.h>
 
 FILE *led_file;
-char old_value;
-
-typedef struct bbb_led{
-	char *brightness;
-	char *trigger;
-}bbb_led;
 
 
-bbb_led ob_led[ON_BOARD_LED_COUNT];
 
-void remove_trigger(int led)
+void init_ob_leb_paths(ob_bbb_led *ob_led_path)
 {
 	int i;
 
 	for(i = 0; i < ON_BOARD_LED_COUNT; i++)
 	{
-		ob_led[i].brightness = (char *)malloc(STRING_OB_LED_PATH_LENGTH*(sizeof(char)));
-		ob_led[i].trigger = (char *)malloc(STRING_OB_LED_PATH_LENGTH*(sizeof(char)));
+		*ob_led.brightness = (char *)malloc(ON_BOARD_LED_COUNT*(sizeof(char)));
+		*ob_led.trigger = (char *)malloc(ON_BOARD_LED_COUNT*(sizeof(char)));
 		switch(i)
 		{
 			case (0):
-				strcpy(ob_led[i].brightness,"/sys/class/leds/beaglebone\\:green\\:usr0/brightness");
-				strcpy(ob_led[i].trigger, "/sys/class/leds/beaglebone\\:green\\:usr0/trigger");
+				strcpy(*ob_led_path.brightness[i],"/sys/class/leds/beaglebone\\:green\\:usr0/brightness");
+				strcpy(*ob_led_path.trigger[i], "/sys/class/leds/beaglebone\\:green\\:usr0/trigger");
 			break;
 			case (1):
-				strcpy(ob_led[i].brightness,"/sys/class/leds/beaglebone\\:green\\:usr1/brightness");
-				strcpy(ob_led[i].trigger, "/sys/class/leds/beaglebone\\:green\\:usr1/trigger");
+				strcpy(*ob_led_path.brightness[i],"/sys/class/leds/beaglebone\\:green\\:usr1/brightness");
+				strcpy(*ob_led_path.trigger[i], "/sys/class/leds/beaglebone\\:green\\:usr1/trigger");
 			break;
 			case (2):
-				strcpy(ob_led[i].brightness,"/sys/class/leds/beaglebone\\:green\\:usr2/brightness");
-				strcpy(ob_led[i].trigger, "/sys/class/leds/beaglebone\\:green\\:usr2/trigger");
+				strcpy(*ob_led_path.brightness[i],"/sys/class/leds/beaglebone\\:green\\:usr2/brightness");
+				strcpy(*ob_led_path.trigger[i], "/sys/class/leds/beaglebone\\:green\\:usr2/trigger");
 			break;
 			case (3):
-				strcpy(ob_led[i].brightness,"/sys/class/leds/beaglebone\\:green\\:usr3/brightness");
-				strcpy(ob_led[i].trigger, "/sys/class/leds/beaglebone\\:green\\:usr3/trigger");
+				strcpy(*ob_led_path.brightness[i],"/sys/class/leds/beaglebone\\:green\\:usr3/brightness");
+				strcpy(*ob_led_path.trigger[i], "/sys/class/leds/beaglebone\\:green\\:usr3/trigger");
 			break;
 		}
 	}
+}
 
-	led_file = fopen(ob_led[led].trigger, "w" );
+void remove_trigger(ob_bbb_led ob_led_path, int led)
+{
+	led_file = fopen(ob_led_path.trigger[led], "w" );
 	fprintf(led_file, "none");
 	fclose(led_file);
 }
 
 
 /*--------------LED switch ON-----------*/
-int on_board_led_on(int led)
+int on_board_led_on(ob_bbb_led ob_led_path, int led)
 {
 
 	if(led > 3)
@@ -65,7 +61,7 @@ int on_board_led_on(int led)
 		return FAILED;
 	}
 
-	led_file = fopen(ob_led[led].brightness, "w+" );
+	led_file = fopen(ob_led_path.brightness[led], "w+" );
 
 	if (!led_file)
 	{
@@ -77,13 +73,13 @@ int on_board_led_on(int led)
 	{
 	fprintf(led_file, "%d", 1);
 	fclose(led_file);
-	printf("LED (%s) on\n", ob_led[led].brightness);
+	printf("LED (%s) on\n", ob_led_path.brightness[led]);
 	return SUCCESS;
 	}
 
 }
 /*--------------LED switch off----------*/
-int on_board_led_off(int led)
+int on_board_led_off(ob_bbb_led ob_led_path, int led)
 {
 
 	if(led > 3)
@@ -104,27 +100,29 @@ int on_board_led_off(int led)
 	{
 	fprintf(led_file, "%d", 0);
 	fclose(led_file);
-	printf("LED (%s) on\n", ob_led_brightness_path[led]);
+	printf("LED (%s) on\n", ob_led_path.brightness[led]);
 	return SUCCESS;
 	}
 }
 /*--------------LED Toggle--------------*/
-int on_board_led_toggle(int led)
+int on_board_led_toggle(ob_bbb_led ob_led_path, int led)
 {
-	led_file = fopen(ob_led_brightness_path[led], "r+" );
-	fscanf(led_file, "%s", old_value);
+	char old_value;
+
+	led_file = fopen(ob_led_path.brightness[led], "r+" );
+	fscanf(led_file, "%c", old_value);
 	fclose(led_file);
 
-	printf("This is init value: %c\n", old_value[0]);
+	printf("This is init value: %c\n", old_value);
 
 	if(!strcmp(old_value, "0"))
 	{
-		on_board_led_on(led);
+		on_board_led_on(ob_led_path, led);
 		return SUCCESS;
 	}
-	else if(!strcmp(old_value, "1"))
+	else if(strcmp(old_value, "0"))
 	{
-		on_board_led_on(led);
+		on_board_led_off(ob_led_path, led);
 		return SUCCESS;
 	}
 	else
