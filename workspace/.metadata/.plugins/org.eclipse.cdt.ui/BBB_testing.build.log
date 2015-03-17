@@ -1,15 +1,21 @@
-13:17:25 **** Incremental Build of configuration Debug for project BBB_testing ****
+20:30:33 **** Incremental Build of configuration Debug for project BBB_testing ****
 make all 
-Building file: ../src/BBB_testing.c
+Building file: ../src/onboard_led_control.c
 Invoking: Cross GCC Compiler
-arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
-Finished building: ../src/BBB_testing.c
- 
-Building target: BBB_testing
-Invoking: Cross GCC Linker
-arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o   
-Finished building target: BBB_testing
- 
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:29:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:29:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:115:2: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘int’ [-Wformat]
+../src/onboard_led_control.c:118:46: error: subscripted value is neither array nor pointer nor vector
+../src/onboard_led_control.c:120:2: warning: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.c:10:0:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+../src/onboard_led_control.c:125:2: warning: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.c:10:0:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+make: *** [src/onboard_led_control.o] Error 1
 
-13:17:26 Build Finished (took 848ms)
+20:30:33 Build Finished (took 120ms)
 

@@ -128,3 +128,531 @@ Invoking: Cross GCC Linker
 arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o   
 Finished building target: BBB_testing
  
+20:09:41 **** Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/BBB_testing.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BBB_testing.d" -MT"src/BBB_testing.d" -o "src/BBB_testing.o" "../src/BBB_testing.c"
+Finished building: ../src/BBB_testing.c
+ 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:25:2: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:25:2: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c:25:16: error: ‘i’ undeclared (first use in this function)
+../src/onboard_led_control.c:25:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/onboard_led_control.c:26:66: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+../src/onboard_led_control.c:27:66: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+../src/onboard_led_control.c:26:12: warning: statement with no effect [-Wunused-value]
+../src/onboard_led_control.c:28:66: error: expected ‘;’ before ‘}’ token
+../src/onboard_led_control.c: At top level:
+../src/onboard_led_control.c:35:2: error: expected identifier or ‘(’ before ‘for’
+../src/onboard_led_control.c:35:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+../src/onboard_led_control.c:35:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘++’ token
+../src/onboard_led_control.c:55:2: warning: data definition has no type or storage class [enabled by default]
+../src/onboard_led_control.c:55:2: warning: type defaults to ‘int’ in declaration of ‘led_file’ [-Wimplicit-int]
+../src/onboard_led_control.c:55:2: error: conflicting types for ‘led_file’
+../src/onboard_led_control.c:10:7: note: previous declaration of ‘led_file’ was here
+../src/onboard_led_control.c:55:39: error: ‘led’ undeclared here (not in a function)
+../src/onboard_led_control.c:56:20: error: expected ‘)’ before string constant
+../src/onboard_led_control.c:57:2: warning: data definition has no type or storage class [enabled by default]
+../src/onboard_led_control.c:57:2: warning: type defaults to ‘int’ in declaration of ‘fclose’ [-Wimplicit-int]
+../src/onboard_led_control.c:57:2: warning: parameter names (without types) in function declaration [enabled by default]
+../src/onboard_led_control.c:58:1: error: expected identifier or ‘(’ before ‘}’ token
+../src/onboard_led_control.c: In function ‘on_board_led_on’:
+../src/onboard_led_control.c:71:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/onboard_led_control.c:76:3: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c:81:2: warning: passing argument 1 of ‘fprintf’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:356:12: note: expected ‘struct FILE * __restrict__’ but argument is of type ‘int’
+../src/onboard_led_control.c:82:2: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c: In function ‘on_board_led_off’:
+../src/onboard_led_control.c:98:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/onboard_led_control.c:103:3: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c:108:2: warning: passing argument 1 of ‘fprintf’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:356:12: note: expected ‘struct FILE * __restrict__’ but argument is of type ‘int’
+../src/onboard_led_control.c:109:2: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:117:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/onboard_led_control.c:118:2: warning: passing argument 1 of ‘fscanf’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:443:12: note: expected ‘struct FILE * __restrict__’ but argument is of type ‘int’
+../src/onboard_led_control.c:119:2: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c:123:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:123:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:128:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:128:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+make: *** [src/onboard_led_control.o] Error 1
+20:12:49 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:25:66: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+../src/onboard_led_control.c:26:66: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+../src/onboard_led_control.c:25:12: warning: statement with no effect [-Wunused-value]
+../src/onboard_led_control.c:27:66: error: expected ‘;’ before ‘}’ token
+../src/onboard_led_control.c: At top level:
+../src/onboard_led_control.c:34:2: error: expected identifier or ‘(’ before ‘for’
+../src/onboard_led_control.c:34:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+../src/onboard_led_control.c:34:38: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘++’ token
+../src/onboard_led_control.c:60:2: warning: data definition has no type or storage class [enabled by default]
+../src/onboard_led_control.c:60:2: warning: type defaults to ‘int’ in declaration of ‘led_file’ [-Wimplicit-int]
+../src/onboard_led_control.c:60:2: error: conflicting types for ‘led_file’
+../src/onboard_led_control.c:10:7: note: previous declaration of ‘led_file’ was here
+../src/onboard_led_control.c:60:39: error: ‘led’ undeclared here (not in a function)
+../src/onboard_led_control.c:61:20: error: expected ‘)’ before string constant
+../src/onboard_led_control.c:62:2: warning: data definition has no type or storage class [enabled by default]
+../src/onboard_led_control.c:62:2: warning: type defaults to ‘int’ in declaration of ‘fclose’ [-Wimplicit-int]
+../src/onboard_led_control.c:62:2: warning: parameter names (without types) in function declaration [enabled by default]
+../src/onboard_led_control.c:63:1: error: expected identifier or ‘(’ before ‘}’ token
+../src/onboard_led_control.c: In function ‘on_board_led_on’:
+../src/onboard_led_control.c:76:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/onboard_led_control.c:81:3: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c:86:2: warning: passing argument 1 of ‘fprintf’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:356:12: note: expected ‘struct FILE * __restrict__’ but argument is of type ‘int’
+../src/onboard_led_control.c:87:2: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c: In function ‘on_board_led_off’:
+../src/onboard_led_control.c:103:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/onboard_led_control.c:108:3: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c:113:2: warning: passing argument 1 of ‘fprintf’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:356:12: note: expected ‘struct FILE * __restrict__’ but argument is of type ‘int’
+../src/onboard_led_control.c:114:2: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:122:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/onboard_led_control.c:123:2: warning: passing argument 1 of ‘fscanf’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:443:12: note: expected ‘struct FILE * __restrict__’ but argument is of type ‘int’
+../src/onboard_led_control.c:124:2: warning: passing argument 1 of ‘fclose’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:237:12: note: expected ‘struct FILE *’ but argument is of type ‘int’
+../src/onboard_led_control.c:128:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:128:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:133:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:133:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+make: *** [src/onboard_led_control.o] Error 1
+20:12:57 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:23:6: error: ‘i’ undeclared (first use in this function)
+../src/onboard_led_control.c:23:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/onboard_led_control.c:25:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:25:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c:31:3: error: case label not within a switch statement
+../src/onboard_led_control.c:35:3: error: case label not within a switch statement
+../src/onboard_led_control.c:39:3: error: case label not within a switch statement
+../src/onboard_led_control.c:43:3: error: ‘default’ label not within a switch statement
+../src/onboard_led_control.c:44:3: error: ‘Break’ undeclared (first use in this function)
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:117:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:117:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:122:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:122:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+make: *** [src/onboard_led_control.o] Error 1
+20:14:26 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:23:6: error: ‘i’ undeclared (first use in this function)
+../src/onboard_led_control.c:23:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/onboard_led_control.c:25:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:25:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c:31:3: error: case label not within a switch statement
+../src/onboard_led_control.c:35:3: error: case label not within a switch statement
+../src/onboard_led_control.c:39:3: error: case label not within a switch statement
+../src/onboard_led_control.c:43:3: error: ‘default’ label not within a switch statement
+../src/onboard_led_control.c:44:3: error: ‘Break’ undeclared (first use in this function)
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:117:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:117:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:122:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:122:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+make: *** [src/onboard_led_control.o] Error 1
+20:14:47 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:27:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:27:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:30:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:30:3: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c:33:3: error: case label not within a switch statement
+../src/onboard_led_control.c:37:3: error: case label not within a switch statement
+../src/onboard_led_control.c:41:3: error: case label not within a switch statement
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:117:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:117:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:122:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:122:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+make: *** [src/onboard_led_control.o] Error 1
+20:16:05 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:27:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:27:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:32:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:32:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:120:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:120:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:125:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:125:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `remove_trigger':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:55: undefined reference to `ob_led_trigger_path'
+./src/onboard_led_control.o: In function `on_board_led_on':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:84: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:110: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:132: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:17:05 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:121:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:121:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:126:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:126:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `remove_trigger':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:56: undefined reference to `ob_led_trigger_path'
+./src/onboard_led_control.o: In function `on_board_led_on':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:85: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:111: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:133: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:17:45 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c:51:19: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c:51:53: error: expected ‘)’ before ‘;’ token
+../src/onboard_led_control.c:54:1: error: too few arguments to function ‘fopen’
+In file included from ../src/onboard_led_control.h:11:0,
+                 from ../src/onboard_led_control.c:8:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:272:14: note: declared here
+../src/onboard_led_control.c:54:1: error: expected ‘;’ before ‘}’ token
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:119:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:119:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:124:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:124:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+make: *** [src/onboard_led_control.o] Error 1
+20:17:56 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:119:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:119:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:124:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:124:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_on':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:83: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:109: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:131: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:18:18 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:119:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:119:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:124:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:124:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_on':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:83: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:109: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:131: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:18:29 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:119:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:119:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:124:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:124:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_on':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:83: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:109: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:131: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:19:00 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:119:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:119:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:124:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:124:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_on':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:83: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:109: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:131: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:26:21 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_on':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:83: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:109: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:131: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:28:17 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:119:18: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:119:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/onboard_led_control.c:124:23: warning: comparison between pointer and integer [enabled by default]
+../src/onboard_led_control.c:124:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:109: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:131: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:29:15 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:28:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:28:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c:33:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:33:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:119:2: warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:109: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:131: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:29:31 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:29:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:29:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:120:2: warning: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.c:10:0:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+../src/onboard_led_control.c:125:2: warning: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.c:10:0:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:110: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:132: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:29:59 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:29:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:29:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+Finished building: ../src/onboard_led_control.c
+ 
+Building target: BBB_testing
+Invoking: Cross GCC Linker
+arm-linux-gnueabi-gcc -L/usr/arm-linux-gnueabi/lib -o "BBB_testing"  ./src/BBB_testing.o ./src/onboard_led_control.o   
+./src/onboard_led_control.o: In function `on_board_led_off':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:110: undefined reference to `ob_led_brightness_path'
+./src/onboard_led_control.o: In function `on_board_led_toggle':
+/home/tony/Documents/repositories/quadcopter-beagle/workspace/BBB_testing/Debug/../src/onboard_led_control.c:132: undefined reference to `ob_led_brightness_path'
+collect2: error: ld returned 1 exit status
+make: *** [BBB_testing] Error 1
+20:30:33 **** Incremental Build of configuration Debug for project BBB_testing ****
+make all 
+Building file: ../src/onboard_led_control.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabi-gcc -I/usr/arm-linux-gnueabi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/onboard_led_control.d" -MT"src/onboard_led_control.d" -o "src/onboard_led_control.o" "../src/onboard_led_control.c"
+../src/onboard_led_control.c: In function ‘remove_trigger’:
+../src/onboard_led_control.c:29:3: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+../src/onboard_led_control.c:29:34: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+../src/onboard_led_control.c: In function ‘on_board_led_toggle’:
+../src/onboard_led_control.c:115:2: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘int’ [-Wformat]
+../src/onboard_led_control.c:118:46: error: subscripted value is neither array nor pointer nor vector
+../src/onboard_led_control.c:120:2: warning: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.c:10:0:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+../src/onboard_led_control.c:125:2: warning: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [enabled by default]
+In file included from ../src/onboard_led_control.c:10:0:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:144:12: note: expected ‘const char *’ but argument is of type ‘char’
+make: *** [src/onboard_led_control.o] Error 1

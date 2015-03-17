@@ -12,6 +12,8 @@
 
 #define SUCCESS 1
 #define FAILED 0
+#define ON_BOARD_LED_COUNT 4
+#define STRING_OB_LED_PATH_LENGTH 100
 
 extern char *ob_led_brightness_path[];
 extern char *ob_led_trigger_path[];
