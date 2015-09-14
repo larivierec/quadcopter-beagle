@@ -13,7 +13,7 @@
 
 void init_ob_leb_paths()
 {
-	int i;
+	int i, j;
 
 	ob_led_path.brightness = (char **)malloc(ON_BOARD_LED_COUNT*(sizeof(char *)));
 	ob_led_path.trigger = (char **)malloc(ON_BOARD_LED_COUNT*(sizeof(char *)));
