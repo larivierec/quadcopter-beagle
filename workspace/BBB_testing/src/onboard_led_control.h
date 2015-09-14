@@ -26,6 +26,7 @@ typedef struct ob_bbb_led{
 	char **trigger;
 }ob_bbb_led;
 
+//Hello
 extern ob_bbb_led ob_led_path;
 
 //Init locations for other functions, pass as reference
