@@ -59,6 +59,8 @@ function install()
 	wget $online_ide_source -O $BBB_WORKSPACE_PATH/eclipse.tar.gz
 	tar -xavf $BBB_WORKSPACE_PATH/eclipse.tar.gz -C $BBB_WORKSPACE_PATH
 
+	ln -s $BBB_WORKSPACE_PATH/eclipse/eclipse /usr/bin/eclipse
+
 	echo "[ $0 ]: Fetching Toolchian Linaro Online Source"
 	wget $TOOLCHAIN_ONLINE_SOURCE -O $BBB_WORKSPACE_PATH/$TOOLCHAIN_NAME
 	tar -xavf $BBB_WORKSPACE_PATH/$TOOLCHAIN_NAME -C $BBB_WORKSPACE_PATH
@@ -82,6 +84,7 @@ function uninstall
 		exit 1
 	fi
 
+	rm /usr/bin/eclipse
 	rm $BBB_WORKSPACE_PATH -r
 
 	echo "[ $0 ]: Finished Removing Eclipse and arm toolchain"
