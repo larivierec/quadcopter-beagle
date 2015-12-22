@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 
 #-------------------Defined Variables-------------------#
@@ -94,9 +94,9 @@ function uninstall
 	rm $BBB_WORKSPACE_PATH -r
 
 	#Remove Symbolic Link
-	if [ -d "/usr/bin/eclipse" ]; then
+	#if [ -d "/usr/bin/eclipse" ]; then
 	 	rm /usr/bin/eclipse
-	fi
+	#fi
 
 	echo "[ $0 ]: Finished Removing Eclipse and arm toolchain"
 }
