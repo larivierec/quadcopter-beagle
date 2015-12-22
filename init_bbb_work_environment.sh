@@ -28,6 +28,12 @@ function install()
 {
 
 	#Check if Previous Version was installed
+	if [ "$(whereis java)" == "" ]; then
+	 	echo "[ $0 ]: Wtf Java's not installed, Bailing out!"
+	 	exit 1
+	fi
+
+	#Check if Previous Version was installed
 	if [ -d "$BBB_WORKSPACE_PATH" ]; then
 	 	echo "[ $0 ]: Seems like you have a previous version installed please do <sudo $0 -uninstall> to uninstall it."
 	 	exit 1
@@ -84,8 +90,13 @@ function uninstall
 		exit 1
 	fi
 
-	rm /usr/bin/eclipse
+	#Remove Workspace Directory
 	rm $BBB_WORKSPACE_PATH -r
+
+	#Remove Symbolic Link
+	if [ -d "/usr/bin/eclipse" ]; then
+	 	rm /usr/bin/eclipse
+	fi
 
 	echo "[ $0 ]: Finished Removing Eclipse and arm toolchain"
 }
